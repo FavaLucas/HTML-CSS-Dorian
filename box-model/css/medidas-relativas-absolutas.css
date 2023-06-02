@@ -1,0 +1,61 @@
+/* 
+  Las medidas en CSS se pueden agrupar en 2 grupos, absolutas y relativas.
+
+  Las medidas absolutas NO CAMBIAN y siempre mantendrán su tamaño independientemente del dispositivo o la interacción del usuario.
+  La más usada es px (píxeles) cuya medida es 1/96 de 1in, pero existen otras como:
+      cm(centímetros) -> 1cm = 96px/2,54
+      mm(milímetros) -> 1mm = 1/10 de 1cm
+      Q(cuarto de de milímetro) -> 1Q = 1/40 de 1cm
+      in(inches, pulgadas) -> 1in = 2,54cm = 96px
+      pc(picas) -> 1pc = 1/16 de 1in
+      pt(puntos) -> 1pt = 1/72 de 1in
+
+  Las medidas relativas SIEMPRE dependen de un contexto son las que se recomienda utilizar en la gran mayoría de ocasiones porque nos van a permitir que todos los elementos escalen proporcionalemnte.
+  Las más usadas son em, rem, %, vw, vh, vmin y vmax aunque tenemos otras como:
+      ex -> Altura x de la fuente del elemento.
+      ch -> La medida del ancho del glifo "0" de la letra del elemento.
+      lh -> Altura de la línea del elemento.
+
+    rem -> Corresponde a la medida de la "m" de la raiz del documento (html).
+
+    ejemplo: 16px = 1rem
+    
+    em -> Corresponde a la medida de la "m" del contexto donde nos encontremos.
+
+    El estandar del tamaño de fuente por defecto en la raiz del documento es 16px, y NO ES RECOMENDABLE MODIFICARLO.
+
+    NOTA: Tanto "em" como "rem" se calcula en base a la propiedad font-size (tamaño de fuente)
+
+    
+
+
+*/
+/*PARA TAMAÑOS DE FUENTES SIEMPRE UTLIZAR TAMAÑO REM!!!!!*/
+
+
+
+body{
+background-color: #333;
+color: lightcoral;
+/* font-size: 16px; */
+
+}
+
+    /* El valor de referencia es el del HTML (que por defecto es de 16px) */
+.title{
+    font-size:1rem;
+}
+
+    /* El valor de referencia es el del elemento donde nos encontramos */
+.title-2{
+    font-size: 4em;
+} 
+
+/* En este ejemplo vemos como los em utilizados se ajustan a la fuente que es rem */
+.link{
+    background-color: lightcoral;
+    color: #333;
+    padding: 1em 2em;
+    border-radius: .5em;
+    font-size: 1rem;
+}

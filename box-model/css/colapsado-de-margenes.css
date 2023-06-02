@@ -1,0 +1,59 @@
+/* COLAPSADO DE MARGENES
+Los margenes verticales colapsan
+    Esto significa que si un elemento tiene un margin bottom de 10px y el siguiente un margin top de 20px, la suma de los margenes deberia separarlos 30 px. Pero por un error CSS no los suma y la separacion es el margen mayor asigmado, en este caso 20.
+
+    Este problema no sucede en margenes horizontales, es decir que si suma los margenes que se dan a derecha a izquierda.
+*/
+
+
+/*COLAPSADO DE MARGENES ENTRE PADRES E HIJOS
+ Los elementos tienen de por si un margen, y este margen afecta a como se visualizan los elementos de nuestra web, para ellos hay 3 posibles soluciones:
+
+    Opciones de Solucion para el colapaso de padres e hijos
+        /* overflow: hidden; */
+        /* padding-top: 0.1px; */
+        /* border-top: 0.1px solid lightcoral */
+
+
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.header{
+    background-color: lightcoral;
+    height: 100px;
+    margin-bottom: 20px; 
+    /* overflow: hidden; */
+    /* padding-top: 0.1px; */
+    border-top: 0.1px solid lightcoral;
+
+}
+
+.title{
+    margin: 0;
+    margin-top: 30px;
+}
+
+.box-1,
+.box-2{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+        /* Este margin botton no se suma con el margin top de box-2 */
+    background-color: lightcyan;
+    width: 300px;
+    height: 300px;
+}
+
+.box-2{
+    margin-top: 20px;
+        /* Este margin top no se suma con el margin bottom de box-1/2 */
+}

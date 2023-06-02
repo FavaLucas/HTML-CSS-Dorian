@@ -1,0 +1,84 @@
+/* BOX MODEL
+
+Caja o Contenido:   tomamos contenido a "la caja en si"
+Borde:              el limite del contenido
+Padding,            lo distancia que separa al contenido y el borde de la caja
+Margin:             nos ayuda a separar una caja de otra
+Width:              Ancho de la caja
+Height:             Alto de la caja
+
+*/
+
+/*IMPROTANTE!!!!!!!!!
+
+Los elementos "inline" solo tienen margin left y right
+
+Los elementos "en bloque" tienen los 4 margenes
+
+TODOS LOS NAVEGADORES INICIAN CON 8px de margen siempre!!!! por eso cuando genero elementos no se pegan al lateral ni arriba
+*/
+
+
+/*  MARGIN - Elementos EN BLOQUE:
+    Es la propiedad que nos permite generar espacio entre elementos
+    Es un shorthand (propiedad abreviada) que controla los 4 lados posibles que usan los margenes.
+    margin-top: margen superior
+    margin-right: margen derecho
+    margin-bottom,: margne inferior
+    margin-left: margen izquierdo
+
+    Admite hasta 4 valores que van en el orden de las agujas del reloj
+    4 valores - margin:top right bottom left;
+    3 valores - margin:top left/right bottom;
+    2 valores - margin: top/bottom left right;
+    1 valor - margin: top/right/bottom/left
+
+*/
+
+
+/*ERRORES MUY COMUNES EN MARGIN*/
+/* Uno de los errores mas comunes es inicar el CSS asi, no es recomendable aun que es muy utilizado. Sirve para iniciar la web sin margenes para establecerlos uno mismo
+*{
+    margin: 0;
+    padding: 0;
+} */
+
+/* Otro error muy comun es querer centrar la caja utilizando margin ""0 auto"
+ como el CSS trabaja en cascada, si abajo en la declaracion del estilo del elemento ponemos otro margen, este sobre escribe el anterior.
+
+ Es decir a los elementos inline no los afecto margin top y bottom
+
+ Es correcto poner: margin-left: auto; + margin-right: auto;
+ de esta forma no se sobre escribien los margenes
+
+*/
+
+
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+.header{
+    background-color: red;
+    height: 50px;
+}
+
+.title{
+    width: 300px;
+}
+
+.block{
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.inline{
+    background-color: lightcoral;
+    color: inherit;
+}
+

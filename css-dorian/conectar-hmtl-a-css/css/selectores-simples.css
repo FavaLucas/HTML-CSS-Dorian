@@ -1,0 +1,98 @@
+/*Selectores*/
+
+/* IMPORTANTE!!
+
+CSS es un  estilo de cascasa, es decir que los estilos que vienen por debajo sobrescriben a los de arriba!!!!!
+
+*/
+
+
+/************************************************************************
+Los que se utilizan son los selectores de clase (simples/atributos/clases)
+
+A-Selectores Simples
+    A-1 Selectores elementales
+        A-1-1 Selector universal -> * (asterisco) se usa para muy pocas cosas ya que va a seleccionar a todos los elementos de la web y no queremos eso.
+
+        A-1-2 Selector de tipo o etiqueta (nombre de la etiqueta)
+
+
+    A-2Selectores de atributos
+        A-2-1  #id (usan #)- id del elemento, no es recomendable dar estilos con id
+
+        A-2-2  .clase (usan .)- clase del elemento. estos son los selectores que se utilizan. No hay limite en la cantidad de clases que se le pueden dar a 1 mismo elemento.    
+
+        A-2-3  otros atributos  - atributos que no sean id o clases
+            Sirve para cualquier atributo que querramos elegir!!!
+            [atributo] (usan []) 
+            [atributo=valor]
+            [atributo^=valor]
+            [atributo*=valor]
+            [atributo$=valor]
+            [atributo|=valor]
+
+
+b-Selectores compuestos
+    Selectores agrupados
+    Selectore combinadores
+    pseudoclases y pseudoelementos
+**************************************************************/
+
+/********************************************************
+Selectores Simples universales y de tipo o etiqueta
+*{
+    background-color: lightcoral;
+}
+
+h1{
+    background-color: lightcyan;
+}
+
+p{
+    background-color: lightgreen;
+}
+
+ul{
+    background-color: red;
+}
+
+li{
+    background-color: blue;
+}
+*********************************************************/
+
+/*******************************************************
+Selectores Siples de atributos - id y clase
+#title{
+    background-color: lightgreen;
+}
+
+.title{
+    background-color: lightsalmon;
+}
+
+.text{
+    background-color: lightgreen;
+}
+*********************************************************/
+/*****************************************************************
+Otros selectores Simples de atributos 
+[href]{
+    background-color: mediumorchid;
+}
+[href="https://google.com"]{
+    background-color: orangered;
+}
+[href^="color"]{
+    background-color: green;
+}
+[href*="modo"]{
+    background-color: pink;
+}
+[href$=rojo]{
+    background-color: deeppink;
+}
+[lang|="en"]{
+    background-color: magenta;
+}
+********************************************************************/

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Etiqueta PICTURE lo que mas se usa</title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+    </style>
+  </head>
+  <!-- Etiqueta PICTURE 
+    Nuevo metodo de trabajar con Imagenes, se usa para reemplazar el SRCSET, pero esta en desarrollo y el atributo media para definir el maximo o minido de ancho donde la imagen cambia de una a otra para cambiar de escritorio a celular
+
+    Utiliza la etiqueta source para cargar las imagenes   
+    REVISAR - NO FUNCIONO 
+    5:21:22 - Etiqueta picture
+    https://www.youtube.com/watch?v=vz4z0RLcAyk
+-->
+
+  <body>
+    <h1>Etiqueta PICTURE las que mas se usa sino IMG</h1>
+    <picture>
+        <!-- 
+      <source srcset="
+          /html-dorian/contenido-embebido/assets/lotr.webp,
+          /html-dorian/contenido-embebido/assets/lotr.jpg"/>
+           -->
+           <source srcset="aa" media="(max-width 500:px)">
+        <img src="aa" alt="">  
+    </picture>
+  </body>
+</html>
